@@ -597,7 +597,7 @@ bool tag_clear_mp4(scan_result *scan) {
 
 void tag_remove_asf(TagLib::ASF::Tag *tag) {
   TagLib::String desc;
-  TagLib::ASF::AttributeListMap &items = tag->attributeListMap();
+  TagLib::ASF::AttributeListMap items = tag->attributeListMap();
 
   for(TagLib::ASF::AttributeListMap::Iterator item = items.begin();
       item != items.end(); ++item)
